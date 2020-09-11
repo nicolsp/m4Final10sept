@@ -25,7 +25,7 @@ class NombreViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun deleteAllNombre() = viewModelScope.launch {
-        repository.deleteAll
+        repository.deleteAll()
     }
 
     fun getOneNombreByID(id : Int) : LiveData<Nombre> {

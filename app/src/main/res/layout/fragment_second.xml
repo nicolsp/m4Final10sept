@@ -4,23 +4,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt2"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="66dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="HHoolaa!!1"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="68dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".SecondFragment"/>
