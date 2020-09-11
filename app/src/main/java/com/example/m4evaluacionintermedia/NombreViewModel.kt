@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class NombreViewModel(application: Application): AndroidViewModel(application) {
 
-    private val repository: NombreRepository
+    private val repository: NombreRepossitory
     val allNombre: LiveData<List<Nombre>>
 
 
