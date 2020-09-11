@@ -1,4 +1,7 @@
 package com.example.m4evaluacionintermedia
 
-class NombreViewModel {
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+
+class NombreViewModel(application: Application): AndroidViewModel(application) {
 }
