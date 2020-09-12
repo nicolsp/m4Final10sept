@@ -10,5 +10,10 @@ data class Nombre(
     @NonNull
     val id: Int = 0,
     val nombre: String,
-    val completeNombre: Boolean) {
+    val completeNombre: Boolean,
+    val cantidad: Int =0,
+    val precio: Double = 0.0
+
+
+) {
 }

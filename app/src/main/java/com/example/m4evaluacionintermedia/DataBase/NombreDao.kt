@@ -2,7 +2,7 @@ package com.example.m4evaluacionintermedia.DataBase
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-
+@Dao
 interface NombreDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

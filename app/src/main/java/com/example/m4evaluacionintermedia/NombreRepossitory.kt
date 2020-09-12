@@ -17,7 +17,7 @@ class NombreRepossitory(private val mNombreDao: NombreDao) {
     }
 
     fun getOneNombreByID(id : Int) : LiveData<Nombre> {
-        return mNombreDao.getOneNombreByID()
+        return mNombreDao.getOneNombreByID(id)
     }
 
     suspend fun updateNombre(mNombre: Nombre) {
