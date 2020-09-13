@@ -56,6 +56,7 @@ class FirstFragment : Fragment() {
 
                 })
             }
+        }
 
 
             button.setOnClickListener {
@@ -91,7 +92,8 @@ class FirstFragment : Fragment() {
 
         }
     }
-}
+
+
 //private fun <T> LiveData<T>.observe(viewLifecycleOwner: LifecycleOwner, observer: Any, function: () -> Unit): T {
 
 //}
