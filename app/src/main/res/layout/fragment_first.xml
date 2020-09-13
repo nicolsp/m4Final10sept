@@ -50,7 +50,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:text="@string/txtr3"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/tv3"
         app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="@string/txtcantidad"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/tv4"
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
         android:id="@+id/txttotal"
         android:layout_width="213dp"
         android:layout_height="44dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="60dp"
         android:text="@string/txttotal"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -97,10 +97,11 @@
         android:id="@+id/idnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txttotal" />
 
@@ -108,19 +109,22 @@
         android:id="@+id/button"
         android:layout_width="173dp"
         android:layout_height="64dp"
-        android:text="Button"
+        android:text="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cb" />
+        app:layout_constraintTop_toBottomOf="@+id/cb"
+        app:layout_constraintVertical_bias="0.325" />
 
     <CheckBox
         android:id="@+id/cb"
         android:layout_width="175dp"
         android:layout_height="49dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="40dp"
         android:text="@string/cb"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idnumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>
