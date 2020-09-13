@@ -11,7 +11,7 @@ data class Nombre(
     val id: Int = 0,
     val nombre: String,
     val completeNombre: Boolean,
-    val cantidad: Int =0,
+    val cantidad: Int = 0,
     val precio: Double = 0.0
 
 

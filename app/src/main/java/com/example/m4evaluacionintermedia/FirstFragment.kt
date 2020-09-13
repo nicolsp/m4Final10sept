@@ -7,8 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -51,8 +49,9 @@ class FirstFragment : Fragment() {
                 getOneNombreByID(it).observe(viewLifecycleOwner, Observer {
                     Log.d("OBJ_LIV", it.nombre)
                     tv1.setText(it.nombre)
-                    tv3.setText(it.cantidad)
+                    tv3.setText(it.cantidad.toInt())
                     cb.isChecked = it.completeNombre
+                    tv4.setText(it.precio.toInt())
 
                 })
             }
@@ -71,14 +70,14 @@ class FirstFragment : Fragment() {
                     if (idNombre != null) {
                         Log.d("OBJ_ID_TASK", idNombre.toString())
                         val mNombre = Nombre(
-                            nombre = textNombre,
-                            completeNombre = checkBox!!
+                            nombre = textNombre, precio = precio.toDouble(), cantidad = cantidad.toInt(),
+                            completeNombre = checkBox !!
                         )
                         mViewModel.updateNombre(mNombre)
                     } else {
                         val mNombre = Nombre(
-                            nombre = textNombre,
-                            completeNombre = checkBox
+                            nombre = textNombre, precio = precio.toDouble(), cantidad = cantidad.toInt(),
+                            completeNombre = checkBox,
                         )
                         mViewModel.insertNombre(mNombre)
                     }
