@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -32,6 +33,8 @@ class SecondFragment : Fragment() , NombreAdapter.PassTheData{
       inflater: LayoutInflater, container: ViewGroup?,
       savedInstanceState: Bundle?
   ): View {
+
+      setHasOptionsMenu(true)
 
       return inflater.inflate(R.layout.fragment_second,container,false)
   }
@@ -64,4 +67,23 @@ class SecondFragment : Fragment() , NombreAdapter.PassTheData{
         Toast.makeText(context, mNombre.id.toString(), Toast.LENGTH_LONG).show()
         findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment, mBundle)
     }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when (item.itemId) {
+            R.id.action_settings -> {
+                Log.d("hola", "app")
+                viewModel.deleteAllNombre()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
+
+
+
   }
