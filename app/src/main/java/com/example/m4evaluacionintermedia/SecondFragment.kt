@@ -52,7 +52,7 @@ class SecondFragment : Fragment() , NombreAdapter.PassTheData{
         })
 
 
-        fab.setOnClickListener {
+        fab2.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
 
