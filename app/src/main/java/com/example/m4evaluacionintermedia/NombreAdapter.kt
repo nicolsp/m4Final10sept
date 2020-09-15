@@ -41,8 +41,8 @@ class NombreAdapter(var mPasstheData: PassTheData) :RecyclerView.Adapter<NombreA
     override fun onBindViewHolder(holder: NombreViewHolder, position: Int) {
        val mNombre: Nombre = dataList[position]
         holder.nombreText.text = mNombre.nombre
-        holder.nombreText2.inputType = mNombre.cantidad.toInt()
-        holder.nombreText3.inputType = mNombre.precio.toInt()
+        holder.nombreText2.text= mNombre.cantidad.toString()
+        holder.nombreText3.text = mNombre.precio.toString()
         holder.chekNombre.isChecked = mNombre.completeNombre
     }
 

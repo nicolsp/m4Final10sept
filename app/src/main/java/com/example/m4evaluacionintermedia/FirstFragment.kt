@@ -82,7 +82,7 @@ class FirstFragment : Fragment() {
             button.setOnClickListener {
 
                 val textNombre = tv1.text.toString()
-               val precio = tv3.text.toString().toInt()
+               val precio = idnumber.text.toString().toInt()
                 val cantidad = tv4.text.toString().toDouble()
                 val checkBox = cb.isChecked
                 val nombre = Nombre(0, textNombre, true, precio, cantidad)
