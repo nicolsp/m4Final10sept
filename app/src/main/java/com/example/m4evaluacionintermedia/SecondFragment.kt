@@ -82,8 +82,4 @@ class SecondFragment : Fragment() , NombreAdapter.PassTheData{
         }
     }
 
-
-
-
-
   }
