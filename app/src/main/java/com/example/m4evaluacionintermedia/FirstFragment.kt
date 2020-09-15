@@ -26,11 +26,25 @@ class FirstFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mViewModel = ViewModelProvider(this).get(NombreViewModel::class.java)
+
         arguments?.let {
             idNombre = it.getInt("id")
             Log.d("OBJ", idNombre.toString())
         }
+      // setContentView(R.layout.fragment_first)
+     //   this.multiplicar_Click()
+
     }
+
+  /* fun multiplicar_Click() {
+       button.setOnClickListener(){
+            var n1: Int =(tv3.text.toString()).toInt()
+            var n2: Int =(tv4.text.toString()).toInt()
+         var total: String = (n1 * n2).toString()
+
+           idnumber.setText(total)
+        }
+    } */
 
 
     override fun onCreateView(
@@ -60,7 +74,7 @@ class FirstFragment : Fragment() {
 
             button.setOnClickListener {
                 val textNombre = tv1.text.toString()
-                val precio = tv3.text.toString().toInt()
+               val precio = tv3.text.toString().toInt()
                 val cantidad = tv4.text.toString().toDouble()
                 val checkBox = cb.isChecked
                 val nombre = Nombre(0, textNombre, true, precio, cantidad)
