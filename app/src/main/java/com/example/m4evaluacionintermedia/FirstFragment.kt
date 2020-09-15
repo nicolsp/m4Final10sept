@@ -32,19 +32,26 @@ class FirstFragment : Fragment() {
             Log.d("OBJ", idNombre.toString())
         }
       // setContentView(R.layout.fragment_first)
-     //   this.multiplicar_Click()
+
 
     }
 
-  /* fun multiplicar_Click() {
-       button.setOnClickListener(){
-            var n1: Int =(tv3.text.toString()).toInt()
-            var n2: Int =(tv4.text.toString()).toInt()
-         var total: String = (n1 * n2).toString()
+   fun multiplicarClick() {
+      cb.setOnCheckedChangeListener({buttonView,isChecked ->
+          if(isChecked ) {
+              var n1: Int =(tv3.text.toString()).toInt()
+              var n2: Int =(tv4.text.toString()).toInt()
+              var total: String = (n1 * n2).toString()
+                Log.d("cascaas", total)
+              idnumber.setText(total)
+          }
+      })
 
-           idnumber.setText(total)
-        }
-    } */
+      }
+       //   cb.setOnClickListener(){
+
+
+
 
 
     override fun onCreateView(
@@ -57,7 +64,7 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        multiplicarClick()
         idNombre?.let {
             mViewModel.run {
                 getOneNombreByID(it).observe(viewLifecycleOwner, Observer {
@@ -73,6 +80,7 @@ class FirstFragment : Fragment() {
 
 
             button.setOnClickListener {
+
                 val textNombre = tv1.text.toString()
                val precio = tv3.text.toString().toInt()
                 val cantidad = tv4.text.toString().toDouble()
