@@ -42,7 +42,7 @@ class FirstFragment : Fragment() {
               var n1: Int =(tv3.text.toString()).toInt()
               var n2: Int =(tv4.text.toString()).toInt()
               var total: String = (n1 * n2).toString()
-                Log.d("cascaas", total)
+                Log.d("El valor total es ", total)
               idnumber.setText(total)
           }
       })
